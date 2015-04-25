@@ -14,6 +14,9 @@
 		3174E5741AEC135B00433FA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3174E5731AEC135B00433FA8 /* Images.xcassets */; };
 		3174E5771AEC135B00433FA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3174E5751AEC135B00433FA8 /* LaunchScreen.xib */; };
 		3174E5831AEC135B00433FA8 /* makeMovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5821AEC135B00433FA8 /* makeMovieTests.m */; };
+		3174E5921AEC177E00433FA8 /* baseImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3174E5911AEC177E00433FA8 /* baseImage.jpg */; };
+		3174E5961AEC212900433FA8 /* TestFrameGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5951AEC212900433FA8 /* TestFrameGenerator.m */; };
+		3174E5991AEC23F900433FA8 /* DqdGeneratedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5981AEC23F900433FA8 /* DqdGeneratedVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		3174E57C1AEC135B00433FA8 /* makeMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = makeMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3174E5811AEC135B00433FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3174E5821AEC135B00433FA8 /* makeMovieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = makeMovieTests.m; sourceTree = "<group>"; };
+		3174E5911AEC177E00433FA8 /* baseImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baseImage.jpg; sourceTree = "<group>"; };
+		3174E5931AEC20F600433FA8 /* DqdFrameGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DqdFrameGenerator.h; sourceTree = "<group>"; };
+		3174E5941AEC212900433FA8 /* TestFrameGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFrameGenerator.h; sourceTree = "<group>"; };
+		3174E5951AEC212900433FA8 /* TestFrameGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFrameGenerator.m; sourceTree = "<group>"; };
+		3174E5971AEC23F900433FA8 /* DqdGeneratedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DqdGeneratedVideo.h; sourceTree = "<group>"; };
+		3174E5981AEC23F900433FA8 /* DqdGeneratedVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DqdGeneratedVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +90,17 @@
 		3174E5651AEC135B00433FA8 /* makeMovie */ = {
 			isa = PBXGroup;
 			children = (
+				3174E5931AEC20F600433FA8 /* DqdFrameGenerator.h */,
+				3174E5971AEC23F900433FA8 /* DqdGeneratedVideo.h */,
+				3174E5981AEC23F900433FA8 /* DqdGeneratedVideo.m */,
+				3174E5941AEC212900433FA8 /* TestFrameGenerator.h */,
+				3174E5951AEC212900433FA8 /* TestFrameGenerator.m */,
 				3174E56A1AEC135B00433FA8 /* AppDelegate.h */,
 				3174E56B1AEC135B00433FA8 /* AppDelegate.m */,
 				3174E56D1AEC135B00433FA8 /* ViewController.h */,
 				3174E56E1AEC135B00433FA8 /* ViewController.m */,
 				3174E5701AEC135B00433FA8 /* Main.storyboard */,
+				3174E5911AEC177E00433FA8 /* baseImage.jpg */,
 				3174E5731AEC135B00433FA8 /* Images.xcassets */,
 				3174E5751AEC135B00433FA8 /* LaunchScreen.xib */,
 				3174E5661AEC135B00433FA8 /* Supporting Files */,
@@ -201,6 +216,7 @@
 			files = (
 				3174E5721AEC135B00433FA8 /* Main.storyboard in Resources */,
 				3174E5771AEC135B00433FA8 /* LaunchScreen.xib in Resources */,
+				3174E5921AEC177E00433FA8 /* baseImage.jpg in Resources */,
 				3174E5741AEC135B00433FA8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3174E56F1AEC135B00433FA8 /* ViewController.m in Sources */,
+				3174E5991AEC23F900433FA8 /* DqdGeneratedVideo.m in Sources */,
 				3174E56C1AEC135B00433FA8 /* AppDelegate.m in Sources */,
+				3174E5961AEC212900433FA8 /* TestFrameGenerator.m in Sources */,
 				3174E5691AEC135B00433FA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
