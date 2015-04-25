@@ -2,6 +2,8 @@
 
 This project demonstrates how to generate a video file using AVFoundation.  The project draws each frame of the video using Core Graphics (Quartz).
 
+The resulting video [looks like this](expected-output.m4v).
+
 ## To use this in your own project
 
 Copy `DqdGeneratedVideo.h`, `DqdGeneratedVideo.m`, and `DqdFrameGenerator.h` to your own project.
