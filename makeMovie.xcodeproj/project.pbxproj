@@ -17,6 +17,8 @@
 		3174E5921AEC177E00433FA8 /* baseImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3174E5911AEC177E00433FA8 /* baseImage.jpg */; };
 		3174E5961AEC212900433FA8 /* TestFrameGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5951AEC212900433FA8 /* TestFrameGenerator.m */; };
 		3174E5991AEC23F900433FA8 /* DqdGeneratedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5981AEC23F900433FA8 /* DqdGeneratedVideo.m */; };
+		3174E59B1AEC364600433FA8 /* COPYRIGHT in Resources */ = {isa = PBXBuildFile; fileRef = 3174E59A1AEC364600433FA8 /* COPYRIGHT */; };
+		3174E59D1AEC365100433FA8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3174E59C1AEC365100433FA8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3174E5951AEC212900433FA8 /* TestFrameGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFrameGenerator.m; sourceTree = "<group>"; };
 		3174E5971AEC23F900433FA8 /* DqdGeneratedVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DqdGeneratedVideo.h; sourceTree = "<group>"; };
 		3174E5981AEC23F900433FA8 /* DqdGeneratedVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DqdGeneratedVideo.m; sourceTree = "<group>"; };
+		3174E59A1AEC364600433FA8 /* COPYRIGHT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT; sourceTree = "<group>"; };
+		3174E59C1AEC365100433FA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 		3174E55A1AEC135B00433FA8 = {
 			isa = PBXGroup;
 			children = (
+				3174E59A1AEC364600433FA8 /* COPYRIGHT */,
+				3174E59C1AEC365100433FA8 /* README.md */,
 				3174E5651AEC135B00433FA8 /* makeMovie */,
 				3174E57F1AEC135B00433FA8 /* makeMovieTests */,
 				3174E5641AEC135B00433FA8 /* Products */,
@@ -214,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3174E59B1AEC364600433FA8 /* COPYRIGHT in Resources */,
 				3174E5721AEC135B00433FA8 /* Main.storyboard in Resources */,
 				3174E5771AEC135B00433FA8 /* LaunchScreen.xib in Resources */,
 				3174E5921AEC177E00433FA8 /* baseImage.jpg in Resources */,
@@ -235,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3174E59D1AEC365100433FA8 /* README.md in Sources */,
 				3174E56F1AEC135B00433FA8 /* ViewController.m in Sources */,
 				3174E5991AEC23F900433FA8 /* DqdGeneratedVideo.m in Sources */,
 				3174E56C1AEC135B00433FA8 /* AppDelegate.m in Sources */,
