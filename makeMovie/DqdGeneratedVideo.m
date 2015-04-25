@@ -64,9 +64,6 @@ NSString *const DqdGeneratedVideoErrorDomain = @"DqdGeneratedViedoErrorDomain";
         [writer startWriting];
         [writer startSessionAtSourceTime:kCMTimeZero];
 
-        __block BOOL didFail = NO;
-        CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB();
-
         [input requestMediaDataWhenReadyOnQueue:adaptorQueue usingBlock:^{
             while (input.readyForMoreMediaData && self.frameGenerator.hasNextFrame) {
                 CMTime time = self.frameGenerator.nextFramePresentationTime;
@@ -77,32 +74,32 @@ NSString *const DqdGeneratedVideoErrorDomain = @"DqdGeneratedViedoErrorDomain";
                 if (code != kCVReturnSuccess) {
                     errorBlock([self errorWithFormat:@"could not create pixel buffer; CoreVideo error code %ld", (long)code]);
                     [input markAsFinished];
-                    didFail = YES;
+                    [writer cancelWriting];
+                    return;
                 } else {
                     CVPixelBufferLockBaseAddress(buffer, 0); {
-                        CGContextRef gc = CGBitmapContextCreate(CVPixelBufferGetBaseAddress(buffer), CVPixelBufferGetWidth(buffer), CVPixelBufferGetHeight(buffer), 8, CVPixelBufferGetBytesPerRow(buffer), rgb, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst); {
-                            [self.frameGenerator drawNextFrameInContext:gc];
-                        } CGContextRelease(gc);
+                        CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB(); {
+                            CGContextRef gc = CGBitmapContextCreate(CVPixelBufferGetBaseAddress(buffer), CVPixelBufferGetWidth(buffer), CVPixelBufferGetHeight(buffer), 8, CVPixelBufferGetBytesPerRow(buffer), rgb, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst); {
+                                [self.frameGenerator drawNextFrameInContext:gc];
+                            } CGContextRelease(gc);
+                        } CGColorSpaceRelease(rgb);
                         [adaptor appendPixelBuffer:buffer withPresentationTime:time];
                     } CVPixelBufferUnlockBaseAddress(buffer, 0);
                 } CVPixelBufferRelease(buffer);
             }
 
-            if (!didFail && !self.frameGenerator.hasNextFrame) {
-                [input markAsFinished];
-                [writer finishWritingWithCompletionHandler:^{
-                    CGColorSpaceRelease(rgb);
-                    if (didFail) {
-                        [writer cancelWriting];
-                    } else {
-                        if (writer.status == AVAssetWriterStatusFailed) {
-                            errorBlock(writer.error);
-                        } else {
-                            dispatch_async(dispatch_get_main_queue(), doneBlock);
-                        }
-                    }
-                }];
+            if (self.frameGenerator.hasNextFrame) {
+                return;
             }
+
+            [input markAsFinished];
+            [writer finishWritingWithCompletionHandler:^{
+                if (writer.status == AVAssetWriterStatusFailed) {
+                    errorBlock(writer.error);
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), doneBlock);
+                }
+            }];
         }];
     });
 }
@@ -131,6 +128,5 @@ NSString *const DqdGeneratedVideoErrorDomain = @"DqdGeneratedViedoErrorDomain";
     return [NSError errorWithDomain:DqdGeneratedVideoErrorDomain code:0 userInfo:@{
                                                                                    NSLocalizedDescriptionKey: string }];
 }
-
 
 @end
