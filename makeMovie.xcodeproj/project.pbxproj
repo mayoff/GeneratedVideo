@@ -18,7 +18,6 @@
 		3174E5961AEC212900433FA8 /* TestFrameGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5951AEC212900433FA8 /* TestFrameGenerator.m */; };
 		3174E5991AEC23F900433FA8 /* DqdGeneratedVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3174E5981AEC23F900433FA8 /* DqdGeneratedVideo.m */; };
 		3174E59B1AEC364600433FA8 /* COPYRIGHT in Resources */ = {isa = PBXBuildFile; fileRef = 3174E59A1AEC364600433FA8 /* COPYRIGHT */; };
-		3174E59D1AEC365100433FA8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3174E59C1AEC365100433FA8 /* README.md */; };
 		3174E59F1AEC413600433FA8 /* expected-output.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3174E59E1AEC413600433FA8 /* expected-output.m4v */; };
 /* End PBXBuildFile section */
 
@@ -246,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3174E59D1AEC365100433FA8 /* README.md in Sources */,
 				3174E56F1AEC135B00433FA8 /* ViewController.m in Sources */,
 				3174E5991AEC23F900433FA8 /* DqdGeneratedVideo.m in Sources */,
 				3174E56C1AEC135B00433FA8 /* AppDelegate.m in Sources */,
@@ -446,6 +444,7 @@
 				3174E5881AEC135B00433FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3174E5891AEC135B00433FA8 /* Build configuration list for PBXNativeTarget "makeMovieTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +453,7 @@
 				3174E58B1AEC135B00433FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
